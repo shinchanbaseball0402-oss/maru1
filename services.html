@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サービス内容 | まるっとオフィス</title>
+    <style>
+        :root { --primary-blue: #0072CE; --primary-cyan: #00A3C4; --dark-blue: #0A2540; --bg-light: #F4F8FA; --text-color: #2D3748; --white: #FFFFFF; --accent-yellow: #FFC72C; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: var(--text-color); background: #FFFFFF; line-height: 1.6; }
+        
+        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .header-in { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-area { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-text { font-size: 22px; font-weight: 800; color: var(--dark-blue); }
+        nav ul { display: flex; list-style: none; gap: 20px; align-items: center; }
+        nav a { text-decoration: none; color: var(--text-color); font-weight: bold; font-size: 15px; }
+        nav a.active, nav a:hover { color: var(--primary-blue); }
+        .btn-nav { background: linear-gradient(135deg, var(--primary-cyan), var(--primary-blue)); color: var(--white) !important; padding: 10px 20px; border-radius: 25px; }
+
+        .page-banner { background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue)); color: var(--white); text-align: center; padding: 50px 20px; }
+        .page-banner h1 { font-size: 32px; margin-bottom: 10px; font-weight: 800; }
+
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .service-block { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; margin-bottom: 60px; background: var(--bg-light); border-radius: 20px; padding: 40px; align-items: center; }
+        .service-block:nth-child(even) { grid-template-columns: 1.5fr 1fr; }
+        .service-icon-box { background: var(--white); border-radius: 50%; width: 140px; height: 140px; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 8px 20px rgba(0,114,206,0.15); }
+        .service-icon-box svg { width: 60px; height: 60px; stroke: var(--primary-blue); fill: none; stroke-width: 2; }
+        .service-title { font-size: 24px; color: var(--dark-blue); margin-bottom: 15px; font-weight: 800; }
+        .service-list { list-style: none; margin-top: 15px; }
+        .service-list li { padding: 8px 0; border-bottom: 1px solid #E2E8F0; font-size: 15px; }
+        .service-list li::before { content: "✔ "; color: var(--primary-cyan); font-weight: bold; }
+
+        footer { background: var(--dark-blue); color: #A0AEC0; text-align: center; padding: 30px 20px; font-size: 14px; margin-top: 80px; }
+        @media(max-width:768px) { .service-block, .service-block:nth-child(even) { grid-template-columns: 1fr; text-align: center; } nav ul { display: none; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-in">
+            <a href="index.html" class="logo-area">
+                <span class="logo-text">まるっとオフィス</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="services.html" class="active">サービス内容</a></li>
+                    <li><a href="features.html">メリット・デメリット</a></li>
+                    <li><a href="pricing.html">料金プラン</a></li>
+                    <li><a href="contact.html" class="btn-nav">無料相談</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-banner">
+        <h1>提供サービス内容</h1>
+        <p>競技や事業に100%集中できるよう、面倒なバックオフィス業務をまるっと代行します</p>
+    </div>
+
+    <div class="container">
+        <div class="service-block">
+            <div class="service-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            </div>
+            <div>
+                <h2 class="service-title">1. 契約・各種申請サポート</h2>
+                <p>スポンサー企業様との契約書確認や、補助金・助成金の申請、自治体・協会提出用書類の作成を徹底サポートします。</p>
+                <ul class="service-list">
+                    <li>スポンサー契約書のチェック・作成補助</li>
+                    <li>各種申請書・請求書の作成代行</li>
+                    <li>公的書類・提出課題のスケジューリング管理</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="service-block">
+            <div>
+                <h2 class="service-title">2. 経理・会計サポート</h2>
+                <p>溜まりがちな領収書やレシートをスマホで送るだけ！確定申告に備えた月次決算データを迅速に整理します。</p>
+                <ul class="service-list">
+                    <li>領収書・請求書のデータ化および仕訳記帳代行</li>
+                    <li>売上・経費の月次収支レポート作成</li>
+                    <li>税理士連携用データの事前準備</li>
+                </ul>
+            </div>
+            <div class="service-icon-box">
+                <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"></path></svg>
+            </div>
+        </div>
+
+        <div class="service-block">
+            <div class="service-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path><polyline points="12 13 12 9 12 13"></polyline><polyline points="9 11 12 8 15 11"></polyline></svg>
+            </div>
+            <div>
+                <h2 class="service-title">3. データ管理・バックオフィス構築</h2>
+                <p>名刺や顧客リスト、各種契約ファイルのクラウド整理を行い、チームや個人での業務効率を圧倒的に高めます。</p>
+                <ul class="service-list">
+                    <li>顧客データ・名刺データのクラウド化</li>
+                    <li>クラウドストレージ（Drive/Dropbox）の整理・運用設計</li>
+                    <li>日常業務の自動化・効率化ツールの導入サポート</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 まるっとオフィス All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
